@@ -1,0 +1,92 @@
+/* Selectores */
+/* Selectores simples: etiqueta, tipo, elemento */
+
+h1 {
+    color: red;
+}
+
+/*
+Selectores simples: clases
+* Pueden comenzar con número
+* Pueden comenzar con - o _
+* Pueden tener :
+* Pueden ser de una letra
+*/
+
+.description {
+    color: green;
+}
+
+/* Selectores simples: id; no se utilizan para CSS */
+
+#title {
+    color: aqua;
+    background: steelblue;
+}
+
+/* Selectores compuestos: agrupados */
+
+h2, h3 {
+    color: blue;
+}
+
+/* Selectores compuestos: combinados */
+
+p.grouper {
+    color: violet;
+    background: lightblue;
+}
+
+/* Selectores compuestos: descendientes */
+
+body p {
+    color: burlywood;
+}
+
+/* Selectores con operadores: * > + ~ */
+
+* {
+
+}
+
+div > span {
+    color: purple;
+}
+
+p + div {
+    border: 1px solid;
+}
+
+/*
+p ~ div {
+    background: lightsalmon;
+}
+*/
+
+/* Selectores de atributo */
+[type="text"] {
+    border: 1px solid red;
+}
+
+[required] {
+    border: 1px solid green;
+}
+
+[type="submit"] {
+    border: none;
+    color: white;
+}
+
+/* Selectores de atributo con comodines: comienza, termina, contiene */
+
+[type^="sub"] {
+    background: green;
+}
+
+a[href$=".mp4"] {
+    color: white;
+}
+
+a[href*="team"] {
+    background: blue;
+}

@@ -1,0 +1,14 @@
+/* Comentario para los estilos */
+h1 {
+    color: red;
+}
+
+/* Custom properties (Variables CSS) */
+:root {
+    --color: blue;
+}
+
+h2 {
+    color: var(--color);
+}
+
