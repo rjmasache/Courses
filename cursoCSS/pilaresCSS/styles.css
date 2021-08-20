@@ -1,0 +1,92 @@
+/*
+Especificidad:
+El navegador hace caso a lo más específico sobre lo general
+Fórmula:
+Etiquetas y pseudoelementos:        1
+Clases, pseudoclases y atributos:   10
+id:                                 100
+Estilos en línea:                   1000
+*/
+
+h1 {
+    color: red;
+}
+
+.title {
+    color: blue;
+}
+
+#title {
+    color: yellow;
+}
+
+h1.title {
+    color: green;
+}
+
+h1#title {
+    color: lightblue;
+}
+
+h1.title#title {
+    color: pink;
+}
+
+body > h1.title#title {
+    color: purple;
+}
+
+/*
+Cascada:
+Código con fines didácticos. No usar !important, es mala práctica
+
+h1 {
+    color: red;
+}
+
+.title {
+    color: blue;
+}
+
+h1 {
+    color: purple !important;
+}
+
+#title {
+    color: steelblue !important;
+}
+*/
+
+/*
+Herencia:
+* inherit
+* initial
+*/
+
+body {
+    color: lightblue;
+}
+
+h2 {
+    color: red;
+}
+
+ul {
+    color: green;
+}
+
+.last {
+    color: purple;
+}
+
+p {
+    color: lightsalmon;
+}
+
+a {
+    color: inherit;
+}
+
+span {
+    font-size: initial;
+}
