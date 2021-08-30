@@ -1,21 +1,23 @@
 /*
 Box model:
-* Layout model:
-    Box model
-    Position
-    Flexbox
-    CSS Grid
+Layout model:
+Box model
+Position
+Flexbox
+CSS Grid
+
 Modelo de caja o Box model:
 Todos los elementos HTML son rectángulos
 2 tipos de cajas (elementos):
+
 1. Bloque:
 * Ocupa todo el espacio horizontal disponible
-* Crea una línea nueva
+* Crean una línea nueva
 * Tienen ancho (width) y alto (height)
-2. Inline (En línea)
+
+2. Inline
 * Ocupan solamente el espacio necesario para su contenido
 * No tienen dimensiones (a excepción de imágenes)
-
 
 Unidades de longitud en CSS:
 1. Píxeles (px)
@@ -43,31 +45,34 @@ img {
 
 /*
 Propiedad display:
-1. block
-2. inline
-3. inline-block
-4. none
+    1. block
+    2. inline
+    3. inline-block
+    4. none
 */
 
 h1 {
+    display: block;
+}
+
+h2  {
     display: inline;
 }
 
-h2 {
-    display: none;
-}
-
 span {
-    display: block;
+    display: none;
 }
 
 p {
     display: inline-block;
-    width: 200px;
+    width: 100px;
     height: 100px;
 }
 
-/* Margin */
+/*
+Margin:
+Define la separación externa de un elemento
+*/
 
 .box {
     width: 200px;
@@ -76,9 +81,9 @@ p {
     margin: 10px 20px 30px 40px;
 }
 
-/* Centrado con margin */
+/* Centrar con margin */
 
-.auto {
+.center {
     width: 200px;
     height: 100px;
     background: purple;
@@ -87,22 +92,50 @@ p {
     margin-left: auto;
 }
 
+/* Centrar imagen */
+
 img {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     display: block;
 }
 
 /* Colapsado de márgenes verticales */
+
 .container {
     width: 400px;
     height: 300px;
     background: lightgreen;
-    padding: 1px;
+    /*padding: 1px;*/
 }
 
 .colapsed {
     background: lightblue;
     width: 100px;
     margin: 50px;
+}
+
+/*
+Padding:
+Define la sepación interna de un elemento
+*/
+
+.pbox {
+    width: 200px;
+    height: 100px;
+    background: red;
+    margin: 10px 20px 30px 40px;
+    padding: 10px 20px;
+}
+
+/* Bordes */
+
+.pbox {
+    border: 1px solid black;
+}
+
+/* Box sizing */
+
+.pbox {
+    box-sizing: border-box;
 }
