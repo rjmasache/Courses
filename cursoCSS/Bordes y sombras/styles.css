@@ -22,3 +22,22 @@ h1 {
     border: 1px solid lightsalmon;
     */
 }
+
+/* border-radius */
+
+.radius {
+    width: 400px;
+    height: 200px;
+    background: lightsalmon;
+    margin: 10px 20px;
+    border: 1px solid;
+    border-radius: 50px 50px;
+}
+
+.radius-2 {
+    width: 100px;
+    height: 100px;
+    background: lightgreen;
+    border: 1px dashed;
+    border-radius: 50%;
+}
