@@ -41,3 +41,33 @@ h1 {
     border: 1px dashed;
     border-radius: 50%;
 }
+
+/* Outline */
+
+.outline {
+    width: 400px;
+    height: 200px;
+    background: lightblue;
+    outline: 10px solid darkred;
+}
+
+/*
+
+Box-shadow:
+    h-offset:
+    v-offset:
+    blur:
+    spread:
+    color:
+    inset (optional):
+
+*/
+
+.box-shadow {
+    width: 400px;
+    height: 400px;
+    background: lightcoral;
+    margin: 100px auto;
+    border-radius: 50%;
+    box-shadow: -20px -20px 20px 0 rgba(0, 0, 0, .8) inset;
+}
