@@ -1,0 +1,9 @@
+/*
+Pseudoclases:
+Selector que se aplica cuando existe un cambio de estado o
+se cumple una condición; se indican con :
+*/
+
+:root {
+    --color: pink;
+}
