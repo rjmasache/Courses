@@ -7,3 +7,72 @@ se cumple una condición; se indican con :
 :root {
     --color: pink;
 }
+
+/*
+:hover
+:active
+:visited
+*/
+
+.hover {
+    display: inline-block;
+    background: lightsalmon;
+    width: 400px;
+    height: 200px;
+    margin-left: 50px;
+    transition: all 1s;
+}
+
+.hover:hover {
+    background: lightgreen;
+    width: 800px;
+    height: 400px;
+}
+
+.active {
+    background: lightpink;
+    width: 200px;
+    height: 200px;
+}
+
+.active a:active {
+    color: red;
+}
+
+.visited {
+    background: lightcyan;
+    width: 200px;
+    height: 200px;
+}
+
+.visited a:visited {
+    color: green;
+}
+
+.visited a:active {
+    color: red;
+}
+
+/*
+:target
+:not
+:empty
+*/
+
+.not {
+    background: lightblue;
+    width: 300px;
+    height: 200px;
+}
+
+.not p:not(.pnot) {
+    color: darkred;
+}
+
+.empty {
+    background: lightskyblue;
+}
+
+/* Se aplica si la caja está vacía */
+.empty:empty {
+}
