@@ -76,3 +76,55 @@ se cumple una condición; se indican con :
 /* Se aplica si la caja está vacía */
 .empty:empty {
 }
+
+/*
+:first-child
+:last-child
+*/
+
+.child :first-child {
+    background: lightgoldenrodyellow;
+}
+
+.child :last-child {
+    background: lightcoral;
+}
+
+/*
+:first-of-type
+:last-of-type
+*/
+
+.child p:first-of-type {
+    background: darkred;
+}
+
+.child p:last-of-type {
+    background: lightgreen;
+}
+
+/*
+:nth-child(even(pares) or odd(impares))
+:nth-last-child(n (número para multiplicar))
+*/
+
+.nth-child :nth-child(5){
+    background: red;
+}
+
+.nth-child :nth-child(n + 5):nth-child(even){
+    background: lightpink;
+}
+
+.nth-child :nth-last-child(4){
+    background: green;
+}
+
+/*
+:nth-of-type
+:nth-last-of-type
+*/
+
+.nth-of-type p:nth-of-type(3){
+    color: lightgreen;
+}
