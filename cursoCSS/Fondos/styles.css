@@ -1,3 +1,7 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
 /*
 Background:
 Es un shorthand
@@ -6,6 +10,7 @@ Es un shorthand
 body {
     background-image: url("https://images.unsplash.com/photo-1631028202764-bb50ad0fb604?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
     background-repeat: repeat;
+    height: 100%;
 }
 
 /*
@@ -17,12 +22,45 @@ body {
     background-size: contain;
 }
 
-div {
+.size {
     background-image: url("https://images.unsplash.com/photo-1631032172548-132c984bf364?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
     background-size: cover;
-    width: 600px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     color: white;
-    margin-right: auto;
-    margin-left: auto;
+}
+
+/* background-position */
+
+.size {
+    background-position: center center;
+    /* background-position: left center right | top center bottom; */
+}
+
+/* background-clip */
+
+.clip {
+    width: 500px;
+    height: 500px;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1602399481667-07536109851e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+    background-position: center center;
+    margin: 50px auto;
+    background-clip: border-box;
+    padding: 50px;
+}
+
+/* background-origin */
+
+.origin {
+    width: 500px;
+    height: 500px;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1499257398700-43669759a540?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-position: center center;
+    margin: 50px auto;
+    background-origin: border-box;
+    padding: 50px;
 }
