@@ -1,0 +1,67 @@
+/*
+Color
+Frente: color
+Fondo: background-color
+*/
+
+body {
+    background-color: lightblue;
+    color: white;
+}
+
+/* currentColor toma el valor de la propiedad color actual */
+
+h1  {
+    border: 1px solid currentColor;
+}
+
+a {
+    color: currentColor;
+}
+
+/* Color keywords */
+
+body {
+    /* background-color: rebeccapurple; */
+}
+
+/*
+Modos de color
+Existen 2 modos de color básicos:
+Aditivo: La suma da blanco -> RGB (red, green, blue)
+Sustractivo: La suma da negro -> CMYK (cyan, magenta, yellow, black)
+
+RGB:
+Existen 8 bits de color, es decir, cada canal tiene 2^8 variaciones posibles; empiezan en 0 y terminan en 255
+R(255), G(255), B(255) -> 16.5 M de colores aproximadamente
+*/
+
+body {
+    /* background-color: rgb(255, 0, 0); */
+    /* background-color: rgb(0, 255, 0); */
+    /* background-color: rgb(0, 0, 255); */
+}
+
+/* rgba() añade un canal más para la transparencia */
+h1 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/*
+Notación hexadecimal
+0 1 2 3 4 5 6 7 8 9 A B C D E F
+0 1 2 3 4 5 6 7 8 9 A B C D E F
+rgb(255, 0, 0) = #FF0000
+*/
+
+/*
+Modo de color HSL
+Hue (Tono): De 0 a 360 grados (círculo cromático) ->
+0 = rojo, 60 = amarillo, 120 = verde, 180 = cyan, 240 = azul, 300 = magenta, 360 = rojo
+Saturation (Intensidad): De 0% (gris)  a 100% (color puro)
+Light (Luz): De 0% (negro) a 100% (blanco)
+*/
+
+body {
+    background-color: hsla(0, 80%, 50%, 0.9);
+}
