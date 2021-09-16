@@ -65,3 +65,17 @@ Light (Luz): De 0% (negro) a 100% (blanco)
 body {
     background-color: hsla(0, 80%, 50%, 0.9);
 }
+
+/*
+Degradados lineales
+background-image: linear-gradient(angle, color1 stop, color2 stop, colorN stop)
+*/
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to top right, lightblue 30%, lightpink 90%);
+    background-repeat: no-repeat;
+}
