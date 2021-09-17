@@ -79,3 +79,32 @@ body {
     background-image: linear-gradient(to top right, lightblue 30%, lightpink 90%);
     background-repeat: no-repeat;
 }
+
+/*
+Degradados radiales
+background-image: radial-gradient([size shape] [at x y], color1 stop, color2 stop, colorN stop)
+Palabras reservadas:
+    closest-corner
+    closest-side
+    farthest-corner
+    farthest-side
+*/
+
+body {
+    background-image: radial-gradient(1000px circle at 50% 50%, yellow, red);
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    margin: 50px auto;
+    background-image: radial-gradient(farthest-side at 0 0, purple, pink);
+    /*background-size: 120%;*/
+}
+
+/* Degradados repetidos */
+
+.box {
+    background-image: repeating-radial-gradient(purple 10%, pink 20%);
+}
