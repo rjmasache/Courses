@@ -26,8 +26,28 @@ console.log(typeof 50)
 console.log(typeof 'JavaScript')
 
 /**
- * boolean
+ * boolean:
  * Pueden tener únicamente un valor, true or false
  */
 
 console.log(typeof true)
+
+/**
+ * Tipos de dato objeto:
+ * Los objetos en JavaScript son colecciones de datos o información
+ * que tienen un identificador y un valor
+ */
+
+// Array
+console.log(['User 1', 'User 2', 'User 3', 'User 4'])
+
+// Objetos JavaScript
+
+console.log(
+    {
+        name: 'Royer', lastName: 'Masache',
+    }
+)
+
+// Null
+console.log(typeof null)
