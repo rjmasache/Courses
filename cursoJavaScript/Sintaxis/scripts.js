@@ -83,5 +83,9 @@ console.log(teacherPremium)
 
 /**
  * Constantes
+ * En JavaScript se debe declarar y asignar una constante en un solo paso.
+ * Las constantes no se pueden reasignar y se escriben generalmente en mayúsculas con formato SNAKE_CASE
  */
 
+const COMPANY = 'APPLE'
+console.log(COMPANY)
