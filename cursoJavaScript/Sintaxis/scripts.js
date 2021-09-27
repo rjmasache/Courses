@@ -51,3 +51,37 @@ console.log(
 
 // Null
 console.log(typeof null)
+
+// undefined
+console.log(typeof undefined)
+
+/**
+ * Variables
+ * Declaración y asignación de variables
+ */
+
+let student = 'Royer'
+console.log(student)
+
+// Reasignación de variables
+student = 'Jeferson'
+console.log(student)
+
+/**
+ * Asignación de variables por referencia
+ */
+
+let teacher = 'Daniel'
+let teacherPremium = teacher
+teacher = 'René'
+
+// Reasignación de variables por referencia
+teacherPremium = teacher
+
+console.log(teacher)
+console.log(teacherPremium)
+
+/**
+ * Constantes
+ */
+
