@@ -60,3 +60,41 @@ let c = 5
 let d = 10
 console.log(c >= d)
 console.log(c <= d)
+
+/**
+ * Operadores lógicos:
+ * Permiten concatenar 2 validaciones
+ * and (&&) y or (||)
+ */
+
+let valor1 = 1
+let valor2 = 2
+let valor3 = 3
+console.log(`¿valor1 es el menor de todos los valores? ${(valor1 < valor2) && (valor1 < valor3)}`)
+
+/**
+ * Operadores unarios y ternarios
+ */
+
+let unario = 10
+unario++
+console.log(unario);
+
+let ternario1 = 5
+let ternario2 = 10
+let ternario3 = ternario1 < ternario2 ? 'Es verdad' : 'No es verdad'
+console.log(ternario3)
+
+/**
+ * Type coercion:
+ * Capacidad del lenguaje de programación para convertir cualquier dato en otro tipo de dato
+ * NaN = Not a Number
+ */
+
+let coercion1 = 2
+let coercion2 = 'Perro'
+console.log(coercion1 - coercion2)
+
+let coercion3 = true
+let coercion4 = false
+console.log(coercion3 + coercion4)
