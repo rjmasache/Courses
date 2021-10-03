@@ -60,3 +60,33 @@ switch (rol) {
 for (let i = 0; i < 10; i++) {
     console.log(i)
 }
+
+/**
+ * Imprimir cada letra de la cadena de texto
+ */
+
+let text = 'aeiou'
+for (let a = 0; a < text.length; a++) {
+    console.log(text[a])
+}
+
+/**
+ * Imprimir cada elemento de la colección de datos
+ */
+
+let texto = ['a', 'b', 'c', 'd', 'e']
+
+for (let i = 0; i < texto.length; i++) {
+    console.log(texto[i])
+}
+
+/**
+ * While
+ */
+
+let dinero = 100
+
+while (dinero > 0) {
+    console.log(`Tienes ${dinero} dólares y te has gastado 10 dólares en ropa. Ahora tienes ${dinero - 10} dólares`)
+    dinero-= 10
+}
