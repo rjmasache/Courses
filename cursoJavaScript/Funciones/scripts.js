@@ -24,3 +24,13 @@ function greet(nombre) {
 
 greet('Royer')
 
+/**
+ * Función con valor de retorno
+ */
+
+function getFullName(name, lastName) {
+     return `Your name is ${name} ${lastName}`
+}
+
+let fullName = getFullName('Royer', 'Masache')
+console.log(fullName)
