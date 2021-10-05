@@ -30,7 +30,7 @@ greet('Royer')
  */
 
 function getFullName(name, lastName) {
-     return `Your name is ${name} ${lastName}`
+    return `Your name is ${name} ${lastName}`
 }
 
 let fullName = getFullName('Royer', 'Masache')
@@ -43,8 +43,7 @@ console.log(fullName)
  */
 
 let anonima = function (a, b, c) {
-    suma = a + b + c
-    return suma
+    return a + b + c
 }
 
 console.log(typeof anonima)
@@ -60,3 +59,45 @@ const constante = function (pi) {
 }
 
 console.log(constante(3.1416))
+
+/**
+ * Scope
+ * Alcance global y alcance de función
+ */
+
+let scope = 'Función Scope'
+scope = 'Scope'
+
+const alcance = function () {
+    let scope = 'Alcance'
+    console.log(`${scope}`)
+}
+
+alcance()
+console.log(scope)
+
+/**
+ * Funciones flecha / Arrow Functions
+ * =>
+ */
+
+const sumar = (a, b) => a + b
+
+const restar = (c, d) => c - d
+
+console.log(sumar(5, 5))
+console.log(restar(6, 3))
+
+const arrowFunction = (nombre) => `Hi ${nombre}`
+console.log(arrowFunction('Royer'))
+
+// Función flecha con lógica
+const arrow = (nombre) => {
+    if (typeof name === "string") {
+        return `Buenas noches ${nombre}`
+    } else {
+        console.error('El tipo de dato ingresado no es el correcto')
+    }
+}
+
+console.log(arrow('Royer'))
