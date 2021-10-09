@@ -67,3 +67,29 @@ console.log(some)
 
 let every = pares.every(numero => numero === 0)
 console.log(every)
+
+/**
+ * Manipulación de strings
+ */
+
+let texto = 'Royer José Masache Ramón'
+
+/**
+ * slice, split, Lower/Upper Case
+ */
+
+let slice = texto.slice(2, 10)
+console.log(slice)
+
+let split = texto.split(' ')
+console.log(split)
+
+let toLower = texto.toLowerCase()
+console.log(toLower)
+
+let toUpper = texto.toUpperCase()
+console.log(toUpper)
+
+if (texto.toUpperCase() || texto.toLowerCase()) {
+    console.log('Good')
+}
