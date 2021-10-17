@@ -143,5 +143,5 @@ console.log(fecha)
 // Obtener año
 console.log(fecha.getFullYear())
 
-// Obtener dia
+// Obtener día
 console.log(fecha.getDay())
