@@ -87,7 +87,7 @@ console.log(ternario3)
 
 /**
  * Type coercion:
- * Capacidad del lenguaje de programación para convertir cualquier dato en otro tipo de dato
+ * Capacidad del lenguaje de programación JavaScript para convertir cualquier dato en otro tipo de dato
  * NaN = Not a Number
  */
 
