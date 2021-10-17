@@ -90,6 +90,58 @@ console.log(toLower)
 let toUpper = texto.toUpperCase()
 console.log(toUpper)
 
-if (texto.toUpperCase() || texto.toLowerCase()) {
-    console.log('Good')
+/**
+ * Valores y atributos
+ * de los objetos
+ */
+
+let alumno = {
+    nombre: 'Royer',
+    edad: 22,
+    premium: true,
+    ciudad: 'Loja'
 }
+
+console.log(alumno)
+
+// Obtener uno de los atributos del objeto
+console.log(alumno.nombre)
+
+// Obtener todos los valores del objeto
+let valoresObjeto = Object.values(alumno)
+console.log(valoresObjeto)
+
+// Obtener los atributos del objeto
+let atributosObjeto = Object.keys(alumno)
+console.log(atributosObjeto)
+
+/**
+ * Math: Permite tener valores matemáticos
+ * Date: Permite tener valores de fecha
+ */
+
+// Obtener valor aleatorio
+const ALEATORIO = Math.random()
+console.log(ALEATORIO)
+
+// Obtener un valor constante
+const CONSTANTE = Math.PI
+console.log(CONSTANTE)
+
+// Obtener el valor máximo
+const MAXIMO = Math.max(1, 3, 6, 2)
+console.log(MAXIMO)
+
+let array = [1, 3, 5, 7]
+let valorMaximo = Math.max(...array)
+console.log(valorMaximo)
+
+// Obtener una fecha
+let fecha = new Date()
+console.log(fecha)
+
+// Obtener año
+console.log(fecha.getFullYear())
+
+// Obtener dia
+console.log(fecha.getDay())
