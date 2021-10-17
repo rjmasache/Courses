@@ -27,10 +27,12 @@ h1 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    color: #002939;
 }
 
 p {
-    background: lightgrey;
+    color: #002939;
+    background-color: #E4CFA9;
     border-radius: 1em;
     margin: 4em;
     padding: 2em;

@@ -92,8 +92,8 @@ console.log(ternario3)
  */
 
 let coercion1 = 2
-let coercion2 = 'Perro'
-console.log(coercion1 - coercion2)
+let coercion2 = '2'
+console.log(coercion1 + coercion2)
 
 let coercion3 = true
 let coercion4 = false
