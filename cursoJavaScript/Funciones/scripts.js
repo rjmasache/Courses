@@ -2,24 +2,21 @@
  * Funciones
  */
 
-// Declaración de la función
-function saludar() {
-    console.log('Hi')
+// Declaración de función
+function hello() {
+    console.log('Hello world!')
 }
 
-// Invocación de la función
-saludar()
+
+// Invocación de función
+hello()
 
 /**
  * Función que recibe parámetros
  */
 
 function greet(nombre) {
-    if (typeof nombre === "string") {
-        console.log(`Hi ${nombre}`)
-    } else {
-        console.log('El tipo de dato ingresado no es el correcto')
-    }
+    console.log(`Buenos días ${nombre}`)
 }
 
 greet('Royer')
@@ -30,7 +27,7 @@ greet('Royer')
  */
 
 function getFullName(name, lastName) {
-    return `Your name is ${name} ${lastName}`
+    return `Tu nombre es ${name} ${lastName}`
 }
 
 let fullName = getFullName('Royer', 'Masache')
@@ -46,8 +43,10 @@ let anonima = function (a, b, c) {
     return a + b + c
 }
 
-console.log(typeof anonima)
 console.log(anonima(1, 2, 3))
+
+let resultado = anonima(5, 5, 5)
+console.log(resultado)
 
 /**
  * Funciones como constantes
@@ -65,11 +64,10 @@ console.log(constante(3.1416))
  * Alcance global y alcance de función
  */
 
-let scope = 'Función Scope'
-scope = 'Scope'
+let scope = 'Variable externa'
 
 const alcance = function () {
-    let scope = 'Alcance'
+    let scope = 'Variable interna'
     console.log(`${scope}`)
 }
 
@@ -88,7 +86,7 @@ const restar = (c, d) => c - d
 console.log(sumar(5, 5))
 console.log(restar(6, 3))
 
-const arrowFunction = (nombre) => `Hi ${nombre}`
+const arrowFunction = nombre => `Función flecha de ${nombre}`
 console.log(arrowFunction('Royer'))
 
 // Función flecha con lógica
