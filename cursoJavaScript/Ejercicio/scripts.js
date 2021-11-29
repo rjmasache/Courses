@@ -23,7 +23,8 @@ const mostrarMenu = () => {
 mostrarMenu()
 
 /**
- * Permitir al usuario pedir elementos del menú
+ * Objeto que almacena los datos del usuario para su pedido y variables para almacenar datos
+ * @type {{name: string, debt: number, age: number}}
  */
 
 let user = {
@@ -36,6 +37,10 @@ let pedido = []
 
 let ventas = 0
 
+/**
+ * Permitir al usuario pedir elementos del menú
+ */
+
 const pedirProducto = product => {
     const productoEncontrado = typeof product === "string" ? products.find(element => element.product === product)
         : console.log('Ingrese un producto válido')
@@ -45,12 +50,20 @@ const pedirProducto = product => {
 pedirProducto('Hamburguesa simple')
 pedirProducto('Refresco')
 
+/**
+ * Permitir al usuario ver su pedido actual
+ */
+
 const verPedido = () => {
     console.log('PEDIDO ACTUAL\nProducto | Precio')
     pedido.forEach(element => console.log(`${element.product} | ${element.value} $`))
 }
 
 verPedido()
+
+/**
+ * Calcular el costo del pedido
+ */
 
 const calcularCosto = () => {
     let costoTotal = 0
@@ -62,11 +75,20 @@ const calcularCosto = () => {
 
 calcularCosto()
 
+/**
+ * Mostrar el valor final del pedido
+ */
+
 const finalizarPedido = () => {
     console.log(`Estimado ${user.name}, usted debe cancelar ${user.debt} dólares por la orden realizada`)
 }
 
 finalizarPedido()
+
+/**
+ * Permitir al usuario cancelar su pedido
+ * @param dineroEntregado
+ */
 
 const pagarPedido = dineroEntregado => {
     let cambio = 0
@@ -93,6 +115,9 @@ const pagarPedido = dineroEntregado => {
 
 pagarPedido(10)
 
+/**
+ * Reporte de ventas realizadas
+ */
 const generarReporte = () => {
     console.log(`REPORTE DE VENTAS\nMonto total de ventas realizadas: ${ventas} dólares`)
 }

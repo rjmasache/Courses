@@ -1,3 +1,8 @@
+/**
+ * Objeto que almacena los productos que se muestran en el menú
+ * @type {[{product: string, value: number}, {product: string, value: number}, {product: string, value: number}]}
+ */
+
 let products = [{
     product: 'Hamburguesa simple',
     value: 2.50
