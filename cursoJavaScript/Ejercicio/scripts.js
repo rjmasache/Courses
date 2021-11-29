@@ -34,6 +34,8 @@ let user = {
 
 let pedido = []
 
+let ventas = 0
+
 const pedirProducto = product => {
     const productoEncontrado = typeof product === "string" ? products.find(element => element.product === product)
         : console.log('Ingrese un producto válido')
@@ -41,6 +43,7 @@ const pedirProducto = product => {
 }
 
 pedirProducto('Hamburguesa simple')
+pedirProducto('Refresco')
 
 const verPedido = () => {
     console.log('PEDIDO ACTUAL\nProducto | Precio')
@@ -70,13 +73,16 @@ const pagarPedido = dineroEntregado => {
     if (typeof dineroEntregado === "number") {
         if (dineroEntregado === user.debt) {
             console.log('Deuda cancelada')
+            ventas += user.debt
             user.debt = 0
         } else if (dineroEntregado > user.debt) {
             cambio = dineroEntregado - user.debt
+            ventas += user.debt
             user.debt = 0
             console.log(`Deuda cancelada, su cambio es de ${cambio} dólares`)
         } else if (dineroEntregado < user.debt) {
             cambio = user.debt - dineroEntregado
+            ventas += dineroEntregado
             user.debt = cambio
             console.log(`Deuda pendiente, usted aún debe ${cambio} dólares`)
         }
@@ -85,4 +91,10 @@ const pagarPedido = dineroEntregado => {
     }
 }
 
-pagarPedido(1)
+pagarPedido(10)
+
+const generarReporte = () => {
+    console.log(`REPORTE DE VENTAS\nMonto total de ventas realizadas: ${ventas} dólares`)
+}
+
+generarReporte()
