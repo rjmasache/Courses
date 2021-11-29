@@ -28,7 +28,8 @@ mostrarMenu()
 
 let user = {
     name: 'Royer',
-    age: 22
+    age: 22,
+    debt: 0
 }
 
 let pedido = []
@@ -36,11 +37,10 @@ let pedido = []
 const pedirProducto = product => {
     const productoEncontrado = typeof product === "string" ? products.find(element => element.product === product)
         : console.log('Ingrese un producto válido')
-
-    productoEncontrado ? pedido.push(productoEncontrado) : console.log('El producto está fuera de stock')
+    pedido.push(productoEncontrado)
 }
 
-// pedirProducto('Hamburguesa simple')
+pedirProducto('Hamburguesa simple')
 
 const verPedido = () => {
     console.log('PEDIDO ACTUAL\nProducto | Precio')
@@ -52,9 +52,37 @@ verPedido()
 const calcularCosto = () => {
     let costoTotal = 0
     for (let element of pedido) {
-        costoTotal+= element.value
+        costoTotal += element.value
     }
-    console.log(`El valor total a pagar es de: ${costoTotal} dólares`)
+    user.debt = costoTotal
 }
 
 calcularCosto()
+
+const finalizarPedido = () => {
+    console.log(`Estimado ${user.name}, usted debe cancelar ${user.debt} dólares por la orden realizada`)
+}
+
+finalizarPedido()
+
+const pagarPedido = dineroEntregado => {
+    let cambio = 0
+    if (typeof dineroEntregado === "number") {
+        if (dineroEntregado === user.debt) {
+            console.log('Deuda cancelada')
+            user.debt = 0
+        } else if (dineroEntregado > user.debt) {
+            cambio = dineroEntregado - user.debt
+            user.debt = 0
+            console.log(`Deuda cancelada, su cambio es de ${cambio} dólares`)
+        } else if (dineroEntregado < user.debt) {
+            cambio = user.debt - dineroEntregado
+            user.debt = cambio
+            console.log(`Deuda pendiente, usted aún debe ${cambio} dólares`)
+        }
+    } else {
+        console.log('El dato ingresado no es válido')
+    }
+}
+
+pagarPedido(1)
