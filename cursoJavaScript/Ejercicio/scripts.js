@@ -47,7 +47,7 @@ const pedirProducto = product => {
     pedido.push(productoEncontrado)
 }
 
-pedirProducto('Hamburguesa simple')
+pedirProducto('Hamburguesa doble')
 pedirProducto('Refresco')
 
 /**
@@ -91,22 +91,20 @@ finalizarPedido()
  */
 
 const pagarPedido = dineroEntregado => {
-    let cambio = 0
     if (typeof dineroEntregado === "number") {
         if (dineroEntregado === user.debt) {
             console.log('Deuda cancelada')
             ventas += user.debt
             user.debt = 0
         } else if (dineroEntregado > user.debt) {
-            cambio = dineroEntregado - user.debt
+            dineroEntregado = dineroEntregado - user.debt
             ventas += user.debt
             user.debt = 0
-            console.log(`Deuda cancelada, su cambio es de ${cambio} dólares`)
+            console.log(`Deuda cancelada, su cambio es de ${dineroEntregado} dólares`)
         } else if (dineroEntregado < user.debt) {
-            cambio = user.debt - dineroEntregado
+            user.debt = user.debt - dineroEntregado
             ventas += dineroEntregado
-            user.debt = cambio
-            console.log(`Deuda pendiente, usted aún debe ${cambio} dólares`)
+            console.log(`Deuda pendiente, usted aún debe ${user.debt} dólares`)
         }
     } else {
         console.log('El dato ingresado no es válido')
@@ -118,6 +116,7 @@ pagarPedido(10)
 /**
  * Reporte de ventas realizadas
  */
+
 const generarReporte = () => {
     console.log(`REPORTE DE VENTAS\nMonto total de ventas realizadas: ${ventas} dólares`)
 }
